@@ -4,10 +4,114 @@
         <meta charset="utf-8" />
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
         <title>MP1</title>
     </head>
     <body>
-        <h1>Hello World! Welcome to MP1!</h1>
-        <img src="assets/image.jpg">
+        <header class="large">
+            <nav id="nav-container">
+                <div id="navbar">
+                    <div class="name" id="me"><a href="#">Aditya Ponnudurai</a></div>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#publications">Publications</a>
+                    <a href="#travels">Travels</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+        </header>
+        <div class="hero-section">
+            <div class="image-container">
+                <img src="assets/image.jpeg" class="me" alt="Aditya Krishna P">
+                <img src="assets/background.jpg" class="background" alt="Background">
+                <div class="content">
+                    <h1>Hello World! Welcome to my Portfolio!</h1>
+                    <p>This is Aditya Krishna P, a Computer Science student at the University of Illinois at Urbana-Champaign.</p>
+                </div>
+            </div>
+        </div>
+        <div id="about">
+            <h2>About Me</h2>
+            <p>I am a Graduate Student at the University of Illinois at Urbana-Champaign pursuing a Master's in Computer Science. I am interested in software development and machine learning.</p>
+        </div>
+        <div id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li class="projects-list">
+                    <div>
+                        <img src="assets/blockchain.png" class="blockchain">
+                        <p>
+                            Built a Health Insurance application on top of the Internet Computer Blockchain that automates the insurance claim settlement process using Canisters.
+                            Developed a priority algorithm with Convex Hull Trick and Square Root Decomposition, achieving
+                            O(√N log N ) complexity in insertion, deletion and querying and reducing latency by 70x for 105 inputs.
+                            Implemented a user-friendly interface using React that seamlessly interacts with the blockchain through Node.js.
+                        </p> 
+                    </div>
+                </li>
+
+                <li class="projects-list">
+                    <div>
+                        <img src="assets/ml.png" class="ml">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, assumenda. Totam dignissimos debitis amet, obcaecati quaerat itaque deleniti eos doloremque repellat accusamus, numquam incidunt sunt excepturi! Nam nesciunt nemo asperiores.
+                        </p> 
+                    </div>
+                </li>      
+
+                <li class="projects-list">
+                    <div>
+                        <img src="assets/pokedex.png" class="pokedex">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nobis dignissimos cum tempora totam natus aliquid ex repudiandae, delectus consequuntur aspernatur, similique obcaecati quam pariatur expedita officia harum cumque eveniet.                        
+                        </p> 
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="publications">
+            <h2>Publications</h2>
+            <ul>
+                <li><strong>Publication 1:</strong> Description of publication 1.</li>
+            </ul>
+        </div>
+        <div id="travels">
+            <h2>Travels</h2>
+            <p>Documenting my travels around the world.</p>
+            <div class="bg-container">
+                <button class="bg-control prev" id="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="fixed-bg"></div>
+                <button class="bg-control next" id="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <p>A video of the sun setting over the hills in the komodo islands, bali</p>
+            <div class="video-container">
+                <video class="fixed-video" autoplay muted loop>
+                    <source src="assets/travels4.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div id="contact">
+            <h2>Contact Me</h2>
+            <p>Email: </p>
+            <p>LinkedIn: </p>
+            <p>GitHub: </p>
+        </div>
+        <!-- <div>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae, labore. Suscipit laudantium dolorem quis ullam consequatur, culpa eveniet. Accusantium corrupti esse at consectetur ea. Rerum qui sunt obcaecati aliquid eveniet.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, quis eum. Doloribus sequi nam saepe, commodi excepturi quas vitae vel consequatur explicabo id doloremque culpa optio architecto nesciunt placeat eius.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nemo praesentium aut minus quo voluptatum magni non ea deserunt qui, asperiores explicabo error obcaecati perspiciatis maiores blanditiis earum impedit officiis!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus aliquam incidunt facere maiores? Error eligendi nihil quasi porro itaque similique sequi accusamus laudantium voluptatem, non sint ipsum, nostrum, repellendus iure!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit ad doloremque provident nihil aliquam officia temporibus ipsa nemo obcaecati nesciunt eius perspiciatis at a, illo consequuntur sed quaerat itaque ipsam?
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus possimus optio velit laborum ipsa nemo perferendis obcaecati ipsam dolore minima repellat earum corrupti, voluptates doloremque ducimus harum fuga debitis et!
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt aliquid fugiat incidunt recusandae unde ea ad dolores at sunt nisi velit hic exercitationem voluptate excepturi, deserunt debitis! Omnis, obcaecati voluptatem.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam quidem expedita necessitatibus omnis exercitationem, ipsa, ad quod delectus vitae ea nulla. Esse veniam reprehenderit libero odio ut laboriosam tenetur dolor?
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste praesentium eius modi deserunt voluptas, veniam natus delectus eaque sapiente possimus inventore quia quod doloribus magnam esse quibusdam omnis exercitationem beatae.
+        </div> -->
+        <footer>
+            <p>&copy; 2025 Aditya Krishna P</p>
+        </footer>
     </body>
 </html>

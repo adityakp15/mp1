@@ -12,11 +12,11 @@
             <nav id="nav-container">
                 <div id="navbar">
                     <div class="name" id="me"><a href="#">Aditya Ponnudurai</a></div>
-                    <a href="#about">About</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#publications">Publications</a>
-                    <a href="#travels">Travels</a>
-                    <a href="#contact">Contact</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#publications" class="nav-link">Publications</a>
+                    <a href="#travels" class="nav-link">Travels</a>
+                    <a href="#contact" class="nav-link">Contact</a>
                 </div>
             </nav>
         </header>
@@ -25,54 +25,84 @@
                 <img src="assets/image.jpeg" class="me" alt="Aditya Krishna P">
                 <img src="assets/background.jpg" class="background" alt="Background">
                 <div class="content">
-                    <h1>Hello World! Welcome to my Portfolio!</h1>
-                    <p>This is Aditya Krishna P, a Computer Science student at the University of Illinois at Urbana-Champaign.</p>
+                    <h1>Hey, I’m Aditya 👋</h1>
+                    <p>I love building cool projects with AI, exploring new ideas, and sharing my travels 🌍✈️</p>
                 </div>
             </div>
         </div>
+
         <div id="about">
             <h2>About Me</h2>
-            <p>I am a Graduate Student at the University of Illinois at Urbana-Champaign pursuing a Master's in Computer Science. I am interested in software development and machine learning.</p>
+            <p>I’m Aditya Krishna Ponnudurai, a Graduate Computer Science student at the University of Illinois Urbana-Champaign, passionate about building intelligent systems that bridge technology and human interaction. My interests span machine learning, natural language processing, and full-stack development, and this portfolio showcases some of the projects and research I’ve worked on along the way.</p>
         </div>
         <div id="projects">
-            <h2>Projects</h2>
+        <h2>Projects</h2>
             <ul>
                 <li class="projects-list">
-                    <div>
-                        <img src="assets/blockchain.png" class="blockchain">
-                        <p>
-                            Built a Health Insurance application on top of the Internet Computer Blockchain that automates the insurance claim settlement process using Canisters.
-                            Developed a priority algorithm with Convex Hull Trick and Square Root Decomposition, achieving
-                            O(√N log N ) complexity in insertion, deletion and querying and reducing latency by 70x for 105 inputs.
-                            Implemented a user-friendly interface using React that seamlessly interacts with the blockchain through Node.js.
-                        </p> 
+                <!-- Trigger -->
+                <div class="blockchain modal-btn">
+                    <img src="assets/blockchain.png" alt="Blockchain Project">
+                </div>
+
+                <!-- Modal -->
+                <div class="modal">
+                    <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h3>Health Insurance Application on Internet Computer Blockchain</h3>
+                    <p>
+                        Built a Health Insurance application on top of the Internet Computer Blockchain
+                        that automates the insurance claim settlement process using Canisters.
+                        Developed a priority algorithm with Convex Hull Trick and Square Root Decomposition,
+                        achieving O(√N log N) complexity in insertion, deletion and querying
+                        and reducing latency by 70x for 10<sup>5</sup> inputs. Implemented a user-friendly
+                        interface using React that seamlessly interacts with the blockchain through Node.js.
+                    </p>
+                    </div>
+                </div>
+                </li>
+
+                <li class="projects-list">
+                    <div class="ml modal-btn">
+                        <img src="assets/ml.png" class="ml">
+                    </div>
+                    
+                    <div class="modal">
+                        <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3>Tamil Troll Meme Detection</h3>
+                            <p>
+                                I published this paper in ICON 2024 (21st International Conference on Natural Language Processing), where I applied machine learning and deep learning models to detect trolling in Tamil memes—combining both text and image features to address the problem in a low-resource language. By creating a labeled dataset and benchmarking multiple models, my work demonstrates how ML can distinguish between humor and offensive content in digital memes.
+                            </p>
+                        </div>
                     </div>
                 </li>
 
                 <li class="projects-list">
-                    <div>
-                        <img src="assets/ml.png" class="ml">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, assumenda. Totam dignissimos debitis amet, obcaecati quaerat itaque deleniti eos doloremque repellat accusamus, numquam incidunt sunt excepturi! Nam nesciunt nemo asperiores.
-                        </p> 
-                    </div>
-                </li>      
-
-                <li class="projects-list">
-                    <div>
+                    <div class="pokedex modal-btn">
                         <img src="assets/pokedex.png" class="pokedex">
+                    </div>
+                    <div class="modal">
+                        <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3>Project Winry</h3>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nobis dignissimos cum tempora totam natus aliquid ex repudiandae, delectus consequuntur aspernatur, similique obcaecati quam pariatur expedita officia harum cumque eveniet.                        
-                        </p> 
+                            ProjectWinry is a Python-based personal voice assistant I built to explore natural language interaction, voice recognition, and simple automation. The assistant can take spoken commands and perform tasks such as searching the web, opening applications, or retrieving information, acting as a lightweight desktop companion.                        
+                        </p>
+                        </div>
                     </div>
                 </li>
             </ul>
         </div>
         <div id="publications">
-            <h2>Publications</h2>
-            <ul>
-                <li><strong>Publication 1:</strong> Description of publication 1.</li>
-            </ul>
+        <h2>Publications</h2>
+            <div class="publication-list">
+                <article class="publication-item">
+                <h3>TRO(F)LL or ROFL? : Exploring Troll Detection in Tamil Memes</h3>
+                    <p>
+                        Published at ICON 2024 (21st International Conference on Natural Language Processing), this paper applies machine learning and deep learning techniques to detect trolling in Tamil memes. Combining text and image analysis, the research tackles this low-resource language challenge by creating a labeled dataset and benchmarking various models. It demonstrates how ML can distinguish humor from offensive content in digital memes.
+                    </p>
+                </article>
+            </div>
         </div>
         <div id="travels">
             <h2>Travels</h2>
@@ -95,23 +125,26 @@
         </div>
         <div id="contact">
             <h2>Contact Me</h2>
-            <p>Email: </p>
-            <p>LinkedIn: </p>
-            <p>GitHub: </p>
+            <div class="contact-row">
+                <a href="mailto:aditponnu@gmail.com" class="icon-email" aria-label="Email">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="32" height="32" fill="currentColor">
+                        <path d="M112 128C85.5 128 64 149.5 64 176C64 191.1 71.1 205.3 83.2 214.4L291.2 370.4C308.3 383.2 331.7 383.2 348.8 370.4L556.8 214.4C568.9 205.3 576 191.1 576 176C576 149.5 554.5 128 528 128L112 128zM64 260L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 260L377.6 408.8C343.5 434.4 296.5 434.4 262.4 408.8L64 260z"/>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/adityakp15" class="icon-user" aria-label="Linkedin">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="32" height="32" fill="currentColor" role="img" aria-label="User Icon">
+                        <path d="M196.3 512L103.4 512L103.4 212.9L196.3 212.9L196.3 512zM149.8 172.1C120.1 172.1 96 147.5 96 117.8C96 103.5 101.7 89.9 111.8 79.8C121.9 69.7 135.6 64 149.8 64C164 64 177.7 69.7 187.8 79.8C197.9 89.9 203.6 103.6 203.6 117.8C203.6 147.5 179.5 172.1 149.8 172.1zM543.9 512L451.2 512L451.2 366.4C451.2 331.7 450.5 287.2 402.9 287.2C354.6 287.2 347.2 324.9 347.2 363.9L347.2 512L254.4 512L254.4 212.9L343.5 212.9L343.5 253.7L344.8 253.7C357.2 230.2 387.5 205.4 432.7 205.4C526.7 205.4 544 267.3 544 347.7L544 512L543.9 512z"/>
+                    </svg>
+                </a>
+                <a href="https://github.com/adityakp15" class="icon-github" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="32" height="32" fill="currentColor" role="img" aria-label="GitHub Logo">
+                        <path d="M237.9 461.4C237.9 463.4 235.6 465 232.7 465C229.4 465.3 227.1 463.7 227.1 461.4C227.1 459.4 229.4 457.8 232.3 457.8C235.3 457.5 237.9 459.1 237.9 461.4zM206.8 456.9C206.1 458.9 208.1 461.2 211.1 461.8C213.7 462.8 216.7 461.8 217.3 459.8C217.9 457.8 216 455.5 213 454.6C210.4 453.9 207.5 454.9 206.8 456.9zM251 455.2C248.1 455.9 246.1 457.8 246.4 460.1C246.7 462.1 249.3 463.4 252.3 462.7C255.2 462 257.2 460.1 256.9 458.1C256.6 456.2 253.9 454.9 251 455.2zM316.8 72C178.1 72 72 177.3 72 316C72 426.9 141.8 521.8 241.5 555.2C254.3 557.5 258.8 549.6 258.8 543.1C258.8 536.9 258.5 502.7 258.5 481.7C258.5 481.7 188.5 496.7 173.8 451.9C173.8 451.9 162.4 422.8 146 415.3C146 415.3 123.1 399.6 147.6 399.9C147.6 399.9 172.5 401.9 186.2 425.7C208.1 464.3 244.8 453.2 259.1 446.6C261.4 430.6 267.9 419.5 275.1 412.9C219.2 406.7 162.8 398.6 162.8 302.4C162.8 274.9 170.4 261.1 186.4 243.5C183.8 237 175.3 210.2 189 175.6C209.9 169.1 258 202.6 258 202.6C278 197 299.5 194.1 320.8 194.1C342.1 194.1 363.6 197 383.6 202.6C383.6 202.6 431.7 169 452.6 175.6C466.3 210.3 457.8 237 455.2 243.5C471.2 261.2 481 275 481 302.4C481 398.9 422.1 406.6 366.2 412.9C375.4 420.8 383.2 435.8 383.2 459.3C383.2 493 382.9 534.7 382.9 542.9C382.9 549.4 387.5 557.3 400.2 555C500.2 521.8 568 426.9 568 316C568 177.3 455.5 72 316.8 72zM169.2 416.9C167.9 417.9 168.2 420.2 169.9 422.1C171.5 423.7 173.8 424.4 175.1 423.1C176.4 422.1 176.1 419.8 174.4 417.9C172.8 416.3 170.5 415.6 169.2 416.9zM158.4 408.8C157.7 410.1 158.7 411.7 160.7 412.7C162.3 413.7 164.3 413.4 165 412C165.7 410.7 164.7 409.1 162.7 408.1C160.7 407.5 159.1 407.8 158.4 408.8zM190.8 444.4C189.2 445.7 189.8 448.7 192.1 450.6C194.4 452.9 197.3 453.2 198.6 451.6C199.9 450.3 199.3 447.3 197.3 445.4C195.1 443.1 192.1 442.8 190.8 444.4zM179.4 429.7C177.8 430.7 177.8 433.3 179.4 435.6C181 437.9 183.7 438.9 185 437.9C186.6 436.6 186.6 434 185 431.7C183.6 429.4 181 428.4 179.4 429.7z"/>
+                    </svg>
+                </a>
+            </div>
         </div>
-        <!-- <div>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae, labore. Suscipit laudantium dolorem quis ullam consequatur, culpa eveniet. Accusantium corrupti esse at consectetur ea. Rerum qui sunt obcaecati aliquid eveniet.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, quis eum. Doloribus sequi nam saepe, commodi excepturi quas vitae vel consequatur explicabo id doloremque culpa optio architecto nesciunt placeat eius.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nemo praesentium aut minus quo voluptatum magni non ea deserunt qui, asperiores explicabo error obcaecati perspiciatis maiores blanditiis earum impedit officiis!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus aliquam incidunt facere maiores? Error eligendi nihil quasi porro itaque similique sequi accusamus laudantium voluptatem, non sint ipsum, nostrum, repellendus iure!
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit ad doloremque provident nihil aliquam officia temporibus ipsa nemo obcaecati nesciunt eius perspiciatis at a, illo consequuntur sed quaerat itaque ipsam?
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus possimus optio velit laborum ipsa nemo perferendis obcaecati ipsam dolore minima repellat earum corrupti, voluptates doloremque ducimus harum fuga debitis et!
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt aliquid fugiat incidunt recusandae unde ea ad dolores at sunt nisi velit hic exercitationem voluptate excepturi, deserunt debitis! Omnis, obcaecati voluptatem.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam quidem expedita necessitatibus omnis exercitationem, ipsa, ad quod delectus vitae ea nulla. Esse veniam reprehenderit libero odio ut laboriosam tenetur dolor?
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste praesentium eius modi deserunt voluptas, veniam natus delectus eaque sapiente possimus inventore quia quod doloribus magnam esse quibusdam omnis exercitationem beatae.
-        </div> -->
         <footer>
-            <p>&copy; 2025 Aditya Krishna P</p>
+            <p>&copy; 2025 Aditya Krishna Ponnudurai</p>
         </footer>
     </body>
 </html>

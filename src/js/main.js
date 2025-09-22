@@ -3,7 +3,6 @@ const backgroundImages = [
     'assets/travels.jpg',
     'assets/travels2.jpg',
     'assets/travels3.jpeg',
-    // 'assets/travels4.mp4'
 ];
 
 let currentImageIndex = 0;
@@ -35,7 +34,7 @@ function prevBackground() {
     updateBackground();
 }
 
-// Add keyboard navigation
+// keyboard navigation
 document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowLeft') {
         prevBackground();
@@ -74,3 +73,75 @@ document.addEventListener('DOMContentLoaded', () => {
     }, false);
 });
 
+
+const modalBtns = document.querySelectorAll(".modal-btn");
+
+modalBtns.forEach((btn) => {
+  const modal = btn.nextElementSibling; // modal is right after the button
+  const closeBtn = modal.querySelector(".close");
+
+  // Open modal
+  btn.addEventListener("click", () => {
+    modal.classList.add("open");
+  });
+
+  // Close modal when clicking X
+  closeBtn.addEventListener("click", () => {
+    modal.classList.remove("open");
+  });
+
+  // Close modal when clicking outside modal-content
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      modal.classList.remove("open");
+    }
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const sections = document.querySelectorAll('div[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+  const navbar = document.querySelector('#nav-container');
+
+  const getNavbarHeight = () => navbar.offsetHeight || 80;
+
+  function updateActiveLink() {
+    let scrollPos = window.scrollY + getNavbarHeight() + window.innerHeight / 2;
+    let currentSection = sections[0].id;
+
+    sections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      const top = window.scrollY + rect.top;
+      const bottom = top + section.offsetHeight;
+
+      if (scrollPos >= top && scrollPos < bottom) {
+        currentSection = section.id;
+      }
+    });
+
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 2) {
+      currentSection = sections[sections.length - 1].id;
+    }
+
+    navLinks.forEach(link => {
+      if (link.hash === `#${currentSection}`) {
+        link.setAttribute('aria-current', 'page');
+      } else {
+        link.removeAttribute('aria-current');
+      }
+    });
+  }
+
+  updateActiveLink();
+  window.addEventListener('scroll', updateActiveLink);
+  window.addEventListener('resize', updateActiveLink);
+});
+
+window.addEventListener('scroll', function() {
+  const navbar = document.getElementById('navbar');
+  if (window.scrollY > 50) {      
+    navbar.classList.add('shrink');
+  } else {
+    navbar.classList.remove('shrink');
+  }
+});

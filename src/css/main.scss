@@ -20,7 +20,7 @@ body {
   display: flex;
   justify-content: center; 
   align-items: center;
-  // padding-top: 2vw;
+  padding-top: 1vw;
 
   div {
     display: flex;
@@ -116,7 +116,15 @@ ul li a{
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 clamp(0.5rem, 2vw, 2rem); 
+  padding: 1rem clamp(0.5rem, 2vw, 2rem);
+  transition: padding 0.3s ease, line-height 0.3s ease;
+  line-height: 0.2rem;
+  height: auto;  
+}
+
+#navbar.shrink {
+  padding: 0.3rem clamp(0.5rem, 1.5vw, 1rem);
+  line-height: 1.8rem; 
 }
 
 .name {
@@ -136,11 +144,6 @@ ul li a{
   transition: all 0.3s ease;
   border-radius: 4px;
   margin: 2px;
-}
-
-#navbar.shrink a {
-  padding: clamp(0.3rem, 1vh, 0.6rem) clamp(0.5rem, 1.5vw, 1rem);
-  font-size: clamp(0.85rem, 1.2vw, 1rem);
 }
 
 #navbar a:hover {
@@ -453,7 +456,7 @@ footer {
 
 }
 
-#navbar.shrink {
-  padding: 0.6rem 2rem;    
-  font-size: 1rem;           
+#navbar.shrink a {
+  padding: 0.2rem 0.6rem;
+  font-size: 1rem;     
 }
